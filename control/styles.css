@@ -1,0 +1,451 @@
+:root{
+
+    --bg:#0f0f12;
+    --panel:#18181d;
+
+    --btn:#23232b;
+    --btn-hover:#32323d;
+
+/*    --active:#00ff88;*/
+    --active:#64bdc8;
+
+    --text:#ffffff;
+    --text-dim:#999;
+
+    --shadow:
+        0 10px 30px rgba(0,0,0,.4);
+}
+
+h1
+{
+    color: #81c4ff;
+    font-family: monospace;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    overflow-y: hidden;
+    user-select: none;
+    margin:0;
+    padding:0;
+
+    background:var(--bg);
+    color:var(--text);
+
+    font-family:
+        Inter,
+        Segoe UI,
+        Arial,
+        sans-serif;
+
+    min-height:100vh;
+}
+
+h1{
+    margin: 0;
+    text-align:center;
+
+    font-size:2rem;
+    font-weight:700;
+
+    letter-spacing:1px;
+}
+
+.separator{
+    display: none;
+    height:20px;
+}
+
+
+
+/* =======================
+   GROUPES D'EFFETS
+   ======================= */
+
+.ediv{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(160px,1fr)
+        );
+
+    gap:12px;
+
+    width:100%;
+
+    padding:20px;
+
+    margin-bottom:20px;
+
+    border-radius:20px;
+
+    background:var(--panel);
+
+    box-shadow:var(--shadow);
+}
+
+.flipX
+{
+    transform: scaleX(-1);
+}
+
+.flipY
+{
+    transform: scaleY(-1);
+}
+
+/* =======================
+   BOUTONS
+   ======================= */
+
+button, input[type=text]{
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    width:100%;
+    min-height:52px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:var(--btn);
+
+    color:var(--text);
+
+    font-size:.95rem;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:
+        transform .15s ease,
+        background .15s ease,
+        box-shadow .15s ease;
+}
+
+button:hover, input[type=text]:hover{
+
+    background:var(--btn-hover);
+
+    transform:translateY(-2px);
+}
+
+/*button:active, input[type=text]:active{
+
+    transform:translateY(1px);
+}
+
+button.active, input[type=text].active{
+
+    background:var(--active);
+
+    color:#000;
+
+    box-shadow:
+        0 0 15px rgba(0,255,136,.5);
+}*/
+
+.gradient-text
+{
+    margin: 15px 10px 0 10px;
+    background: linear-gradient(
+        90deg,
+        #ff0000,
+        #ff00ff,
+        #00ffff
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+#version
+{
+    background: linear-gradient(
+        90deg,
+        #ff00ff,
+        #6a00ff,
+        #28004d,
+        #00ffff
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+#tap-tempo {
+    text-align: center;
+    font-family: monospace;
+}
+
+.tempo-display {
+    margin-bottom: 25px;
+}
+
+#bpm {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00d4ff;
+}
+
+#phase {
+    margin-top: 10px;
+    opacity: 0.7;
+}
+
+#tap-button
+{
+    width: 58%;
+    margin-left: 21%;
+    font-size: 2rem;
+    height: 60px;
+}
+
+#tap-button {
+/*    width: 100%;
+    height: 180px;*/
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+
+/*    font-size: 2.5rem;*/
+    font-weight: bold;
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #00d4ff,
+        #6b4dff
+    );
+
+    transition:
+        transform .08s,
+        filter .08s;
+}
+
+#tap-button:hover {
+    filter: brightness(1.1);
+}
+
+#tap-button:active {
+    transform: scale(0.95);
+}
+
+button.active
+{
+    border: 3px solid white;
+    animation: pulse-active 1s infinite;
+    background: radial-gradient(#FF80C7, #A927F5);
+}
+
+@keyframes pulse-active
+{
+    0%
+    {
+        box-shadow:
+            0 0 5px white;
+    }
+
+    50%
+    {
+        box-shadow:
+            0 0 20px white,
+            0 0 40px white;
+    }
+
+    100%
+    {
+        box-shadow:
+            0 0 5px white;
+    }
+}
+
+input[type=text]
+{
+    text-align: center;
+    font-size: 130%;
+}
+
+.controls{
+
+    width:100%;
+
+    padding:20px;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(180px,1fr)
+        );
+
+    gap:12px;
+
+    border-radius:20px;
+
+    background:var(--panel);
+
+    box-shadow:var(--shadow);
+}
+
+/* =======================
+   TITRES DE GROUPES
+   ======================= */
+
+.group-title{
+
+    width:100%;
+
+    text-align:center;
+
+    margin-bottom:12px;
+
+    color:var(--text-dim);
+
+    font-size:.9rem;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    grid-column:1 / -1;
+}
+
+@media (max-width:900px){
+
+    .ediv{
+
+        grid-template-columns:
+            repeat(
+                auto-fit,
+                minmax(130px,1fr)
+            );
+    }
+
+    button{
+
+        min-height:48px;
+
+        font-size:.85rem;
+    }
+}
+
+.card {
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#color-value {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    font-family: monospace;
+}
+
+.ediv > label
+{
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 150%;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+#golive
+{
+    user-select: none;
+    position: absolute;
+    align-self: center;
+    justify-self: center;
+    font-size: 300%;
+    color: #960000;
+}
+
+#preview
+{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+
+    border-radius: 15px;
+}
+
+.preview_169
+{
+    aspect-ratio: 1 !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    transform: rotate(-90deg) !important;
+}
+
+#panels
+{
+    display: flex;
+
+    width: 100vw;
+    height: 100vh;
+
+    overflow-x: auto;
+
+    scroll-snap-type: x mandatory;
+
+    scrollbar-width: none;
+}
+
+#panels::-webkit-scrollbar, .panel::-webkit-scrollbar
+{
+    display: none;
+}
+
+.panel
+{
+    scrollbar-width: none;
+    padding-bottom: 35% !important;
+    flex: 0 0 100vw;
+
+    height: 100vh;
+
+    overflow-y: auto;
+
+    scroll-snap-align: start;
+
+    box-sizing: border-box;
+
+    padding: 16px;
+}
+
+.auto
+{
+    width: 90%;
+    margin-left: 5%;
+}
