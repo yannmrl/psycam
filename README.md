@@ -17,7 +17,7 @@ PsyCam uses a shared **token** to connect the display running on a computer with
 
 ### 1. Choose a Token
 
-Select any unique token (for example: `party2026`).
+Select any unique token (for example: `xyz123`).
 
 This token will be used to pair the display and the controller.
 
@@ -34,7 +34,7 @@ https://krorion.wysigot.com/psycam/display?token=YOUR_TOKEN
 Example:
 
 ```
-https://krorion.wysigot.com/psycam/display?token=party2026
+https://krorion.wysigot.com/psycam/display?token=xyz123
 ```
 
 By default, PsyCam displays the webcam feed with the selected visual effects applied.
@@ -52,7 +52,7 @@ https://krorion.wysigot.com/psycam/display?screen&token=YOUR_TOKEN
 Example:
 
 ```
-https://krorion.wysigot.com/psycam/display?screen&token=party2026
+https://krorion.wysigot.com/psycam/display?screen&token=xyz123
 ```
 
 Your browser will ask which screen or window should be shared.
@@ -72,7 +72,7 @@ Enter the same token used on the computer.
 Example:
 
 ```
-party2026
+xyz123
 ```
 
 Once connected, the phone becomes a wireless remote control for the visual effects.
