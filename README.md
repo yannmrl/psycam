@@ -61,27 +61,6 @@ Once connected, the phone becomes a wireless remote control for the visual effec
 
 ---
 
-## Typical Setup
-
-```text
-┌─────────────┐
-│ Smartphone  │
-│ Controls UI │
-└──────┬──────┘
-       │ Token
-       ▼
-┌─────────────┐
-│   PsyCam    │
-│  Display    │
-│  Computer   │
-└──────┬──────┘
-       │
-       ▼
- Webcam or Screen Capture
-```
-
----
-
 ## Use Cases
 
 - Live music performances
@@ -95,4 +74,3 @@ Once connected, the phone becomes a wireless remote control for the visual effec
 
 - A modern web browser
 - A smartphone for remote control
-- Optional microphone, webcam, or screen-sharing capability
