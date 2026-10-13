@@ -31,12 +31,6 @@ To use the webcam as the video source:
 https://krorion.wysigot.com/psycam/display?token=YOUR_TOKEN
 ```
 
-Example:
-
-```
-https://krorion.wysigot.com/psycam/display?token=xyz123
-```
-
 By default, PsyCam displays the webcam feed with the selected visual effects applied.
 
 ---
@@ -47,12 +41,6 @@ To apply effects to the computer screen rather than the webcam, open:
 
 ```
 https://krorion.wysigot.com/psycam/display?screen&token=YOUR_TOKEN
-```
-
-Example:
-
-```
-https://krorion.wysigot.com/psycam/display?screen&token=xyz123
 ```
 
 Your browser will ask which screen or window should be shared.
@@ -68,12 +56,6 @@ https://krorion.wysigot.com/controls
 ```
 
 Enter the same token used on the computer.
-
-Example:
-
-```
-xyz123
-```
 
 Once connected, the phone becomes a wireless remote control for the visual effects.
 
